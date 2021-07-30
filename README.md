@@ -33,6 +33,11 @@ Data
 -lists
 loops
 -control flow if else or maybe switch or
+-Input will be a number gotten as a string from the player.
+-Convert that string from the user to an integer
+Int.Parse.(playerNumber);
+Console.WriteLine();
+-Then check if the integer is equal to the random number pick by the computer.
 
 
 Lists?
@@ -45,11 +50,25 @@ If number is less than correctNumber then, too low!.
 loops
 
 Algorithm
+
 1- When game starts, Console.WriteLine() a greeting to the player, describing the challenge:
-Console.WriteLine("I am thinking of a number between 1-1024. Enter your best guess for a number: .");
-If number is less than correctNumber then, print too low.
-If number is greater than correctNumber then, print too high.
-If number is equal to the correctNumber then, print you win!
+
+  Console.WriteLine("Greetings!. In this game, you, the player will try to guess a number from 1-1024. If number is correct, you win. If number is not correct, you loose.")
+Define a variables
+number
+
+2- Game asks the player to guess the number.
+  Console.WriteLine("I am thinking of a number between 1-1024. Enter your best guess for a number: .");
+
+  If number is less than correctNumber then, print too low.
+    Console.WriteLine("Nice try but your number is too low."); Ask the question again or step 2.
+
+  If number is greater than correctNumber then, print too high.
+    Console.WriteLine("Nice try but your number is too high."); Ask the question again or step 2.
+
+  If number is equal to the correctNumber then, print you win!
+  Console.WriteLine("That's the number. Congratulations. You win!.");
+
 End the game.
 
 Code
