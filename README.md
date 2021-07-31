@@ -6,8 +6,10 @@ Your program should assume the human player would answer any guess truthfully.
 Problem
 
 Once the program starts, display a Welcome greeting to the user describing the challenge.
-
+Hello welcome to our game.
 Prompt the user with your guess and allow them to tell you if their number is higher, lower, or correct.
+I am thinking of a number. Can you guess the number?
+
 Keep refining your guess until you have the correct answer.
 
 Use methods to organize your code. Here are some suggestions for methods you might use:
@@ -58,7 +60,7 @@ Define a variables
 number
 
 2- Game asks the player to guess the number.
-  Console.WriteLine("I am thinking of a number between 1-1024. Enter your best guess for a number: .");
+  Console.WriteLine("I am thinking of a number between 1-1024. Enter your best guess for a number: ."); Or create a method.
 
   If number is less than correctNumber then, print too low.
     Console.WriteLine("Nice try but your number is too low."); Ask the question again or step 2.
