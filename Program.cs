@@ -23,7 +23,7 @@ namespace NumberGuesser
                 int midValue = lowest + midpoint;
                 bool secretNumber = true;
 
-                Console.WriteLine("Pick a secret number between 1 to 100. Press enter to continue");
+                Console.WriteLine("Think of a number between 1 to 100. Press enter to continue");
                 Console.ReadKey();
                 while (lowest <= highest && secretNumber)
                 {
@@ -31,8 +31,8 @@ namespace NumberGuesser
                     midpoint = differenceOfRange / 2;
                     midValue = lowest + midpoint;
 
-                    Console.WriteLine("Is your secret number: {0}", midValue);
-                    Console.WriteLine(" 1: No my secret number is lower \n 2: No my secret number is greater \n 3: That is my secret number! ");
+                    Console.WriteLine("Is your number: {0}", midValue);
+                    Console.WriteLine(" 1: No my  number is lower \n 2: No my number is greater \n 3: That is my number! ");
                     int userChoiceToInt = int.Parse(Console.ReadLine());
                     int userChoice = userChoiceToInt;
                     if (userChoice == 3)
