@@ -49,11 +49,11 @@ namespace NumberGuesser
 
                     if (lowest < highest && userChoice == 2)
                     {
-                        //if number is too high
+                        //secret number is higher
                         lowest = midValue + 1;
                         Console.WriteLine("Your number was {0}", midValue);
                     }
-                    //if number is too low
+                    //secret number is lower
                     else if (lowest < highest && userChoice == 1)
                     {
                         highest = midValue - 1;
