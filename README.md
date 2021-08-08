@@ -4,12 +4,24 @@
 Your program should assume the human player would answer any guess truthfully.
 
 Problem
+            //Creating a method ShowGreeting to describe the purpose of the game:
+            //Hi human, you are thinking of a number between 1-1024. I, the computer will try to guess it.
+            //I do not know how many tries it will take but help me figure out if the number I try is too low or too high from
+            //the number you are thinking of.
 
-Once the program starts, display a Welcome greeting to the user describing the challenge.
-Hello welcome to our game.
-Prompt the user with your guess and allow them to tell you if their number is higher, lower, or correct.
-I am thinking of a number. Can you guess the number?
+            //Computer will ask the human if the computerNumber is equal to the correctNumber
+            //the numbers the computer will test will be in the range between 1-1024; is it #?
+            //the human will compare the computerNumber with the correctNumber to see if the computer is
+            //guessing too low or if the computer guess is too high.
+            //If the human says too low, the computer will try to guess high (this may repeat)
+            //use a method ComputerNewLowIfTooLow
+            //If the human says the too high the computer will try to guess low (this may repeat)
+            //use a method ComputerNewHighIfTooHigh
+            //If the human says the computerNumber is equal to the correctNumber, the computer is told and
+            //use a method BragWhenCorrect
+            //a winner message is displayed.
 
+An user if thinking of a number, can the computer guess that number?
 Keep refining your guess until you have the correct answer.
 
 Use methods to organize your code. Here are some suggestions for methods you might use:
@@ -29,6 +41,13 @@ Example
 Greeting to user or player and description of the game.
 -Console.WriteLine("I am thinking of a number between 1-1024. Enter your best guess for a number: .")
 -The guess will be a number therefore it will be an int. Grab the string and convert it to int and save it to a variable named playerNumber.
+
+Let's say the user prompts the computer, can you guess a number between 1-1024.
+The user already knows the number but the computer has to find out if the number is too low, too high or correct.
+while the computer is not correct, the user keeps telling the computer if numberGuessedBytheComputer is too high or too low. If the number is too low, the computer keeps going higher, if the number is too high, the computer keeps going lower until the number is correct.
+
+If the number is the number computer  wins.
+Keep telling too high or too low while the number is not correct.
 
 Data
 -random

@@ -7,58 +7,54 @@ namespace NumberGuesser
         static void DisplayGreeting()
         {
             Console.WriteLine("----------------------------------------------");
-            Console.WriteLine("Hello and Welcome to our Game!");
+            Console.WriteLine("Hello there!.\n" +
+            "Think of a number between 1 and 1024. \n" +
+            "I bet I can guess it.");
             Console.WriteLine("----------------------------------------------");
         }
-        static string PromptForAString(string prompt)
-        {
-            Console.Write(prompt);
-            //get user input
-            var userInput = Console.ReadLine();
-            return userInput;
-        }
-        static string IsUserInputCorrectGuess(string prompt)
-        {
-            Console.Write(prompt);
-            var IsUserInputCorrectGuess = Console.ReadLine();
-            return IsUserInputCorrectGuess;
-        }
-        static int PromptForAnInterger(string prompt)
-        {
-            Console.Write(prompt);
-            var userInput = Console.ReadLine();
-            var userInputAsInteger = int.Parse(userInput);
-            //we are returning the user input as an integer
-            return userInputAsInteger;
-        }
-
         static void Main(string[] args)
         {
-            DisplayGreeting();
-            Random random = new Random();
-            int numberToGuess = random.Next(1, 1024);
-            string userName = PromptForAString("What is your name?: ");//method being used
-            int userGuess = PromptForAnInterger($"{userName}, I am thinking of a number betwee 1 - 1024. Can you guess the number?: ");
-            if (userGuess != numberToGuess)
             {
-                if (userGuess < numberToGuess)
-                {
-                    //how can I not repeat myself?
-                    Console.WriteLine($"No. The number I am thinking about is higher than {userGuess}. Can you guess what it is?");
-                }
-                if (userGuess > numberToGuess)
-                {
-                    Console.WriteLine($"No. The number I am thinking about is lower than {userGuess}. Can you guess what it is?");
-                    Console.Write($"The mystery number was: {numberToGuess}. ");
-                }
-                else if (userGuess == numberToGuess)
-                {
-                    Console.WriteLine($"Congrats! You guessed it! The number was: {numberToGuess}");
-                    Console.Write($"The mystery number was: {numberToGuess}. ");
+                DisplayGreeting();
+                int lowest = 1;
+                int highest = 1024;
+                int differenceOfRange = highest - lowest;
+                int midpoint = differenceOfRange / 2;
+                int midValue = lowest + midpoint;
+                bool secretNumber = true;
 
+                Console.WriteLine("Pick a secret number between 1 to 100. Press enter to continue");
+                Console.ReadKey();
+                while (lowest <= highest && secretNumber)
+                {
+                    differenceOfRange = highest - lowest;
+                    midpoint = differenceOfRange / 2;
+                    midValue = lowest + midpoint;
+
+                    Console.WriteLine("Is your secret number: {0}", midValue);
+                    Console.WriteLine(" 1: No my secret number is lower \n 2: No my secret number is greater \n 3: That is my secret number! ");
+                    int userChoiceToInt = int.Parse(Console.ReadLine());
+                    int userChoice = userChoiceToInt;
+                    if (userChoice == 3)
+                    {
+                        Console.WriteLine("Computer Wins!");
+                        secretNumber = false;
+                    }
+
+                    if (lowest < highest && userChoice == 2)
+                    {
+                        lowest = midValue + 1;
+                        Console.WriteLine("Your number is {0}", midValue);
+                    }
+                    else if (lowest < highest && userChoice == 1)
+                    {
+                        highest = midValue - 1;
+                        Console.WriteLine("Your number is {0}", midValue);
+                    }
                 }
 
-            };
+            }
+
         }
     }
 }
