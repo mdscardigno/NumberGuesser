@@ -37,19 +37,19 @@ namespace NumberGuesser
                     int userChoice = userChoiceToInt;
                     if (userChoice == 3)
                     {
-                        Console.WriteLine("Computer Wins!");
+                        Console.WriteLine("You guessed it!");
                         secretNumber = false;
                     }
 
                     if (lowest < highest && userChoice == 2)
                     {
                         lowest = midValue + 1;
-                        Console.WriteLine("Your number is {0}", midValue);
+                        Console.WriteLine("Your number was {0}", midValue);
                     }
                     else if (lowest < highest && userChoice == 1)
                     {
                         highest = midValue - 1;
-                        Console.WriteLine("Your number is {0}", midValue);
+                        Console.WriteLine("Your number was {0}", midValue);
                     }
                 }
 
