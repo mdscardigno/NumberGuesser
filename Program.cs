@@ -25,6 +25,7 @@ namespace NumberGuesser
 
                 Console.WriteLine("Think of a number between 1 to 1024. Press enter to continue");
                 Console.ReadKey();
+                //while lowest number is less or equal to the highest number and the secretNumber is true
                 while (lowest <= highest && secretNumber)
                 {
                     differenceOfRange = highest - lowest;
@@ -43,7 +44,7 @@ namespace NumberGuesser
                     if (userChoice == 3)
                     {
                         Console.WriteLine("You guessed it!");
-                        secretNumber = false;//the number is not longer secret
+                        secretNumber = false;//the number is not longer secret therefore is false
                     }
 
                     if (lowest < highest && userChoice == 2)
