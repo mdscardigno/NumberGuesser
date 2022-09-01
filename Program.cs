@@ -29,7 +29,7 @@ namespace NumberGuesser
                 while (lowest <= highest && secretNumber)
                 {
                     differenceOfRange = highest - lowest;
-                    Console.Write($"the differeneOfRange is: {differenceOfRange} ");
+                    // Console.Write($"the differeneOfRange is: {differenceOfRange} ");
                     midpoint = differenceOfRange / 2;
                     midValue = lowest + midpoint;
                     //starting at the middle 512
